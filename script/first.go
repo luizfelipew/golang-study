@@ -23,13 +23,24 @@ func main() {
 	fmt.Println("O endereco da variavel comando eh", &comando)
 	fmt.Println("O comando escolhido foi:", comando)
 
-	if comando == 1 {
+	// if comando == 1 {
+	// 	fmt.Println("Monitorando...")
+	// } else if comando == 2 {
+	// 	fmt.Println("Exibindo Logs...")
+	// } else if comando == 0 {
+	// 	fmt.Println("Saindo do programa")
+	// } else {
+	// 	fmt.Println("Näo conheço esse comando")
+	// }
+
+	switch comando {
+	case 1:
 		fmt.Println("Monitorando...")
-	} else if comando == 2 {
+	case 2:
 		fmt.Println("Exibindo Logs...")
-	} else if comando == 0 {
+	case 0:
 		fmt.Println("Saindo do programa")
-	} else {
+	default:
 		fmt.Println("Näo conheço esse comando")
 	}
 }
