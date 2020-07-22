@@ -2,36 +2,14 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 func main() {
-	nome := "Luiz"
-	versao := 1.1
-	fmt.Println("Ola Sr.", nome)
-	fmt.Println("Este programa está na versão", versao)
 
-	// fmt.Println("O tipo da variavel eh:", reflect.TypeOf(versao))
-
-	fmt.Println("1- Iniciar Monitoramento")
-	fmt.Println("2- Exibir os Logs")
-	fmt.Println("0- Sair do Programa")
-
-	var comando int
-	// fmt.Scanf("%d", &comando)
-	fmt.Scan(&comando)
-
-	fmt.Println("O endereco da variavel comando eh", &comando)
-	fmt.Println("O comando escolhido foi:", comando)
-
-	// if comando == 1 {
-	// 	fmt.Println("Monitorando...")
-	// } else if comando == 2 {
-	// 	fmt.Println("Exibindo Logs...")
-	// } else if comando == 0 {
-	// 	fmt.Println("Saindo do programa")
-	// } else {
-	// 	fmt.Println("Näo conheço esse comando")
-	// }
+	exibeIntroducao()
+	exibeMenu()
+	comando := leComando()
 
 	switch comando {
 	case 1:
@@ -40,7 +18,35 @@ func main() {
 		fmt.Println("Exibindo Logs...")
 	case 0:
 		fmt.Println("Saindo do programa")
+		os.Exit(0)
 	default:
 		fmt.Println("Näo conheço esse comando")
+		os.Exit(-1)
 	}
+}
+
+func exibeIntroducao() {
+	nome := "Luiz"
+	versao := 1.1
+	fmt.Println("Ola Sr.", nome)
+	fmt.Println("Este programa está na versão", versao)
+	// fmt.Println("O tipo da variavel eh:", reflect.TypeOf(versao))
+}
+
+func exibeMenu() {
+	fmt.Println("1- Iniciar Monitoramento")
+	fmt.Println("2- Exibir os Logs")
+	fmt.Println("0- Sair do Programa")
+}
+
+func leComando() int {
+
+	var comandoLido int
+	// fmt.Scanf("%d", &comando)
+	fmt.Scan(&comandoLido)
+
+	fmt.Println("O endereco da variavel comando eh", &comandoLido)
+	fmt.Println("O comando escolhido foi:", comandoLido)
+
+	return comandoLido
 }
