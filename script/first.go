@@ -56,5 +56,6 @@ func leComando() int {
 func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
 	site := "http://www.alura.com.br"
-	http.Get(site)
+	resp, _ := http.Get(site)
+	fmt.Println(resp)
 }
