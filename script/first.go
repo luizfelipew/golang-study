@@ -4,23 +4,14 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"reflect"
 )
 
 func main() {
 
-	var sites [4]string
-	sites[0] = "https://random-status-code.herokuapp.com/"
-	sites[1] = "https://www.alura.com.br"
-	sites[2] = "https://www.caelum.com.br"
-	fmt.Println(reflect.TypeOf(sites))
-	fmt.Println(sites)
-
-	exibeNomes()
-	// exibeIntroducao()
+	exibeIntroducao()
 
 	for {
-		// exibeMenu()
+		exibeMenu()
 		comando := leComando()
 
 		switch comando {
@@ -67,12 +58,14 @@ func leComando() int {
 
 func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
-	var sites [4]string
-	sites[0] = "https://random-status-code.herokuapp.com/"
-	sites[1] = "https://www.alura.com.br"
-	sites[2] = "https://www.caelum.com.br"
+	sites := []string{"https://random-status-code.herokuapp.com/",
+		"https://www.alura.com.br", "https://www.caelum.com.br"}
 
-	fmt.Println(sites)
+	// fmt.Println(sites)
+
+	for i, site := range sites {
+		fmt.Println("Estou passando na posicao", i, "do meu slice e essa posicao tem o site:", site)
+	}
 
 	site := "https://random-status-code.herokuapp.com/"
 	resp, _ := http.Get(site)
@@ -82,20 +75,4 @@ func iniciarMonitoramento() {
 	} else {
 		fmt.Println("Site:", site, "esta com problemas. Status Code:", resp.StatusCode)
 	}
-}
-
-func exibeNomes() {
-	nomes := []string{"Luiz", "Felipe", "Wendt"}
-
-	fmt.Println(nomes)
-	fmt.Println(reflect.TypeOf(nomes))
-	fmt.Println("O meu slice tem", len(nomes), "itens")
-	fmt.Println("O meu slice tem capacidade para", cap(nomes), "itens")
-
-	nomes = append(nomes, "Aparecida")
-
-	fmt.Println(nomes)
-	fmt.Println(reflect.TypeOf(nomes))
-	fmt.Println("O meu slice tem", len(nomes))
-	fmt.Println("O meu slice tem capacidade para", cap(nomes), "itens")
 }
