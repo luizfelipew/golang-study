@@ -1,12 +1,12 @@
-https://www.alura.com.br - online true
-https://random-status-code.herokuapp.com/ - online true
-https://www.caelum.com.br - online true
-https://www.casadocodigo.com.br - online true
-https://www.alura.com.br - online true
-https://random-status-code.herokuapp.com/ - online true
-https://www.caelum.com.br - online true
-https://www.casadocodigo.com.br - online true
-https://www.alura.com.br - online true
-https://random-status-code.herokuapp.com/ - online false
-https://www.caelum.com.br - online true
-https://www.casadocodigo.com.br - online true
+31/07/2020 12:29:29 - https://www.alura.com.br - online: true
+31/07/2020 12:29:29 - https://random-status-code.herokuapp.com/ - online: false
+31/07/2020 12:29:30 - https://www.caelum.com.br - online: true
+31/07/2020 12:29:30 - https://www.casadocodigo.com.br - online: true
+31/07/2020 12:29:36 - https://www.alura.com.br - online: true
+31/07/2020 12:29:36 - https://random-status-code.herokuapp.com/ - online: true
+31/07/2020 12:29:37 - https://www.caelum.com.br - online: true
+31/07/2020 12:29:37 - https://www.casadocodigo.com.br - online: true
+31/07/2020 12:29:43 - https://www.alura.com.br - online: true
+31/07/2020 12:29:43 - https://random-status-code.herokuapp.com/ - online: false
+31/07/2020 12:29:44 - https://www.caelum.com.br - online: true
+31/07/2020 12:29:44 - https://www.casadocodigo.com.br - online: true
